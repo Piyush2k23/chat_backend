@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect("mongodb+srv://chatbuddy:mybuddy@cluster0.vgzvk.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -28,7 +28,7 @@ app.use("/api/messages", messageRoutes);
 const PORT = process.env.PORT || 6000;
 
 const server = app.listen(PORT, () =>
-  console.log(`Server started on ${process.env.PORT}`)
+  console.log(`Server started on ${PORT}`)
 );
 
 
