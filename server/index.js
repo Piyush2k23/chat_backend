@@ -34,7 +34,7 @@ const server = app.listen(PORT, () =>
 
 const io = socket(server, {
   cors: {
-    origin: "https://chat-buddy-app.netlify.app",
+    origin: "https://chat-buddy-app.onrender.com",
     credentials: true,
   },
 });
